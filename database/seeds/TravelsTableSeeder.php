@@ -12,12 +12,15 @@ class TravelsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        $newTravel = new Travel();
+        for($i = 0; $i < 15; $i++){
+            $newTravel = new Travel();
         $newTravel ->title = $faker->name();
         $newTravel ->address = $faker->streetAddress();
-        $newTravel ->day = '' ;
-        $newTravel ->dateinizio = '';
-        $newTravel ->datefine = '';
+        //$newTravel ->day = $faker->unique() ;
+        $newTravel ->dateinizio = $faker->streetAddress();
+        $newTravel ->datefine = $faker->streetAddress();
         $newTravel->save();
+        }
+        
     }
 }
