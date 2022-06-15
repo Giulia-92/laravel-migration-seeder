@@ -16,7 +16,7 @@ class TravelsTableSeeder extends Seeder
             $newTravel = new Travel();
         $newTravel ->title = $faker->name();
         $newTravel ->address = $faker->streetAddress();
-        //$newTravel ->day = $faker->unique() ;
+        $newTravel ->days = $faker->numberBetween(0,20);
         $newTravel ->dateinizio = $faker->streetAddress();
         $newTravel ->datefine = $faker->streetAddress();
         $newTravel->save();

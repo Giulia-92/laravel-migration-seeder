@@ -17,7 +17,7 @@ class CreateTravelsTable extends Migration
             $table->id();
             $table->string('title',120);
             $table->string('address');
-            $table->float('day');
+            $table->float('days');
             $table->date('dateinizio');
             $table->date('datefine');
             $table->timestamps();
